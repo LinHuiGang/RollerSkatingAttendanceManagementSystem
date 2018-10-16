@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0' />
+    <meta name="Generator" content="EditPlus">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <link rel="stylesheet" type="text/css" href="./css/menu.css" media="all">
+    <!-- 客服部分 -->
+    <link href="./css/cebian.css" rel="stylesheet" media="screen" type="text/css" />
+    <script type="text/javascript" src="./js/jquery-1.10.2.min.js"></script>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <title>飘逸轮滑倶乐部</title>
+</head>
+
+<body>
+    <div class="bg"><img src="./images/home-default17.jpg" width="100%" height="100%;"></div>
+    <div data-role="widget" data-widget="nav4" class="nav4">
+        <nav>
+            <div id="nav4_ul" class="nav_4">
+                <ul class="box">
+                    <li>
+                        <a href="login.php"><span>用户登陆</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><span>返回首页</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div id="nav4_masklayer" class="masklayer_div on">&nbsp;</div>
+        <script src="../js/nav4.js"></script>
+        <script type="text/javascript">
+            nav4.bindClick(document.getElementById("nav4_ul").querySelectorAll("li>a"), document.getElementById("nav4_masklayer"));
+        </script>
+    </div>
+        <!-- 客服部分 -->
+        <div style="right:-230px;" class="contactusdiyou">
+            <div class="hoverbtn">
+                <span>联</span><span>系</span><span>我</span><span>们</span>
+                <img class="hoverimg" src="./images/hoverbtnbg.gif" height="9" width="13">
+	</div>
+                <div class="conter">
+                    <div class="con1">
+                        <dl class="fn_cle">
+                            <dt><img src="./images/tel.png" height="31" width="31"></dt>
+                            <dd class="f1">咨询热线：</dd>
+                            <dd class="f2"><span class="ph_num">17695917853</span></dd>
+                        </dl>
+                    </div>
+                    <div class="blank0"></div>
+                    <div class="qqcall">
+                        <dl class="fn_cle">
+                            <dt><img src="./images/zxkfqq.png" height="31" width="31"></dt>
+                            <dd class="f1 f_s14">在线客服：</dd>
+                            <dd class="f2 kefuQQ">
+                                <span>客服一</span>
+                                    <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=13253572&amp;site=qq&amp;menu=yes"></a>
+                                <p><span>客服二</span>
+                                    <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=13253572&amp;site=qq&amp;menu=yes"></a></p>
+                            </dd>
+                        </dl>
+                        <div class="blank0"></div>
+                    </div>
+                    <div class="blank0"></div>
+                    <div class="weixincall">
+                        <dl class="fn_cle">
+                            <dt><img src="./images/weixin.png" height="31" width="31"></dt>
+                            <dd class="f1">官方微信站：</dd>
+                            <dd class="f3"><img src="./images/wechat_code.png" height="100" width="100"></dd>
+                        </dl>
+                    </div>
+                    <div class="blank0"></div>
+                    <div class="dytimer">
+                        <span style="font-weight: bold;">公司官网：</span>
+                        <span><a href="./index.php">www.piaoyilunhua.com</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="diyoumask"></div>
+        <script type="text/javascript">
+        $(function() {
+            $(".contactusdiyou").hover(function() {
+                $(".hoverimg").attr("src", "./images/hoverbtnbg1.gif");
+                $('.diyoumask').fadeIn();
+                $('.contactusdiyou').animate({ right: '0' }, 300);
+            }, function() {
+                $(".hoverimg").attr("src", "./images/hoverbtnbg.gif");
+                $('.contactusdiyou').animate({ right: '-230px' }, 300, function() {});
+                $('.diyoumask').fadeOut();
+            });
+        });
+        </script>
+        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+                <td colspan="2">
+                    <div align="center"><img src="./images/logo.png" width="298" height="90"></div>
+                </td>
+            </tr>
+        </table>
+        <div class="container">
+            <div class="page-header ex-page-header">
+                <h1 class="title">最新动态<small>  ——轮滑大事件</small></h1>
+            </div>
+            <div class="body-container">
+                <div class="row">
+                    <div class="col-md-10">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4>文章列表</h4>
+                            </div>
+                            <div class="panel-body">
+                                <div class="form-horizontal">
+                                    <div class="panel-body">
+                                        <table class="table table-hover">
+                                            <tr>
+                                                <th>作者</th>
+                                                <th>标题</th>
+                                                <th>时间</th>
+                                                <th>操作</th>
+                                            </tr>
+                                            <tbody>
+                                                <tr>
+                                                    <td>管理员</td>
+                                                    <td>WEO轮滑考级介绍</td>
+                                                    <td>2018-02-27</td>
+                                                    <td><a href="article.html">查看</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="text-align: center;color: #333;">
+                    © Powered by<a href="http://www.ym998.cn" target="_blank" style="color: #333"> 源梦科技</a>
+                </div>
+</body>
+
+</html>
