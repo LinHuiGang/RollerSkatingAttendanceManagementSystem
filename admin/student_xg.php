@@ -123,6 +123,18 @@ require_once 'footsuper.php';
                             </tr>
                         </table>
                     </fieldset>
+                    <fieldset>
+                        <legend>场地</legend>
+                        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" bordercolor="#FF0000">
+                            <tr>
+                                <td>
+                                    <p><input type='radio' name='scope' value="室内" style='width:20px;height:20px' <?php echo $res['scope']=='室内'?'checked':''; ?>/> 室内 </p>
+                                    <p><input type='radio' name='scope' value="室外1" style='width:20px;height:20px' <?php echo $res['scope']=='室外1'?'checked':''; ?>/> 室外1 </p>
+                                    <p><input type='radio' name='scope' value="室外2" style='width:20px;height:20px' <?php echo $res['scope']=='室外2'?'checked':''; ?>/> 室外2 </p>
+                                </td>
+                            </tr>
+                        </table>
+                    </fieldset>
             </td>
         </tr>
     </table>

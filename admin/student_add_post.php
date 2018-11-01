@@ -12,10 +12,7 @@ if(!isset($_SESSION['name'])){
     header('Location:../login.php');
     exit();
 }
-if(isset($_POST['name_']) && isset($_POST['sex'])  && isset($_POST['birth_date']) && isset($_POST['height'])
-        && isset($_POST['weight']) && isset($_POST['phone']) && isset($_POST['money']) && isset($_POST['type'])
-        && isset($_POST['max_count']) && isset($_POST['integral']) && isset($_POST['password'])
-        && isset($_POST['start_time']) && isset($_POST['end_time'])){
+if(isset($_POST)){
     require_once '../include/db_class.php';
     require_once '../config.php';
     $row=$db->insert('student',$_POST);

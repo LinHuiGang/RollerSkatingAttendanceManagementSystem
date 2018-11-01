@@ -1,13 +1,13 @@
 <?php
 session_start();
-if(!isset($_SESSION['name'])){
+if(!isset($_SESSION['name_'])){
     header('Location:../login.php');
     exit();
 }
 require_once '../include/db_class.php';
 require_once '../config.php';
-$sql = 'select * from student';
-$res = $db->getAll($sql);
+$sql = "select * from student where name_='".$_SESSION['name_']."'";
+$res = $db->getRow($sql);
 $db->close();
 ?>
 <!DOCTYPE html>
@@ -15,57 +15,82 @@ $db->close();
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>123456</title>
+    <title><?php echo $res['name_'];?>学员-信息</title>
     <link rel="stylesheet" type="text/css" href="./layui/css/layui.css">
 </head>
 
 <body>
     <div class="layui-container">
         <div class="layui-row">
-            <table lay-filter="demo">
+            <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+                <legend><?php echo $res['name_'];?>学员信息</legend>
+            </fieldset>
+            <table  lay-even class="layui-table">
                 <thead>
                 <tr>
-                    <th lay-data="{field: 'id' ,width:65,totalRowText:'合计：'}">ID</th>
-                    <th lay-data="{field: 'name_' ,width:80,totalRowText:'共有<?php echo count($res)?>人'}">姓名</th>
-                    <th lay-data="{field: 'sex' ,width:65}">性别</th>
-                    <th lay-data="{field: 'birth_date'}">出生日期</th>
-                    <th lay-data="{field: 'height'}">身高</th>
-                    <th lay-data="{field: 'weight'}">体重</th>
-                    <th lay-data="{field: 'phone'}">手机号</th>
-                    <th lay-data="{field: 'money' ,totalRow: true}">缴费</th>
-                    <th lay-data="{field: 'type'}">类型</th>
-                    <th lay-data="{field: 'max_count',width:65,totalRow: true}">次数</th>
-                    <th lay-data="{field: 'start_time'}">start</th>
-                    <th lay-data="{field: 'end_time'}">end</th>
+                    <th>类别</th>
+                    <th>信息</th>
                 </tr>
                 </thead>
                 <tbody>
-                <?php
-                foreach ($res as $key) {
-                    echo "<tr><td>".$key['id']."</td><td>".$key['name_']."</td><td>".$key['sex']."</td><td>"
-                        .$key['birth_date']."</td><td>".$key['height']."</td><td>".$key['weight']."</td><td>"
-                        .$key['phone']."</td><td>".$key['money']."</td><td>".$key['type']."</td><td>"
-                        .$key['max_count']."</td><td>".$key['start_time']."</td><td>".$key['end_time']."</td></tr>";
-                }
-                ?>
+                <tr>
+                    <td>编号</td>
+                    <td><?php echo $res['id'];?></td>
+                </tr>
+                <tr>
+                    <td>姓名</td>
+                    <td><?php echo $res['name_'];?></td>
+                </tr>
+                <tr>
+                    <td>性别</td>
+                    <td><?php echo $res['sex'];?></td>
+                </tr>
+                <tr>
+                    <td>出生日期</td>
+                    <td><?php echo $res['birth_date'];?></td>
+                </tr>
+                <tr>
+                    <td>身高</td>
+                    <td><?php echo $res['height'];?></td>
+                </tr>
+                <tr>
+                    <td>体重</td>
+                    <td><?php echo $res['weight'];?></td>
+                </tr>
+                <tr>
+                    <td>手机号</td>
+                    <td><?php echo $res['phone'];?></td>
+                </tr>
+                <tr>
+                    <td>缴费</td>
+                    <td><?php echo $res['money'];?></td>
+                </tr>
+                <tr>
+                    <td>类型</td>
+                    <td><?php echo $res['type'];?></td>
+                </tr>
+                <tr>
+                    <td>次数</td>
+                    <td><?php echo $res['max_count'];?></td>
+                </tr>
+                <tr>
+                    <td>开始时间</td>
+                    <td><?php echo $res['start_time'];?></td>
+                </tr>
+                <tr>
+                    <td>结束时间</td>
+                    <td><?php echo $res['end_time'];?></td>
+                </tr>
                 </tbody>
             </table>
+            <div style="text-align: center;margin-top: 200px;">
+                <hr class="layui-bg-cyan">
+                © Powered by<a href="http://www.ym998.cn" target="_blank"> 源梦科技</a>
+            </div>
         </div>
     </div>
     <script src="./layui/layui.js"></script>
-    <script>
-        layui.use('table', function(){
-            var table = layui.table;
-            table.init('demo', {
-                limit: <?php echo count($res)?> //注意：请务必确保 limit 参数（默认：10）是与你服务端限定的数据条数一致
-                //支持所有基础参数
-                ,page: false
-                ,totalRow:true
-                ,toolbar:true
-                ,defaultToolbar:['filter', 'exports']
-            });
-        });
-    </script>
+
 </body>
 
 </html>

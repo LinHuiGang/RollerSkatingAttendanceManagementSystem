@@ -31,8 +31,8 @@ if(isset($_POST['name']) && isset($_POST['password']) && isset($_POST['sf'])) {
             exit();
         }
         if ($res['password'] == $_POST['password']) {
-            $_SESSION['name_'] = $res['name'];
-            header('Location:index.php');
+            $_SESSION['name_'] = $res['name_'];
+            header('Location:./xy/index.php');
         } else {
             echo '用户名或密码错误！<br /> <a href="login.php">重新登录</a>';
         }

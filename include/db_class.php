@@ -235,8 +235,10 @@ class db_class {
 
     public static function json($data){
         $count=0;
-        foreach ( $data as $key => $value ) {
-            $data[$key] = urlencode($value);
+        foreach ( $data as $arr ) {
+            foreach ($arr as $key => $value) {
+                $arr[$key] = urlencode($value);
+            }
             $count++;
         }
         $json=array(

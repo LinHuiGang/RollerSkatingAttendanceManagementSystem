@@ -13,7 +13,7 @@ if(!isset($_SESSION['name'])){
 require_once '../include/db_class.php';
 require_once '../config.php';
 //查询所有学生信息
-$sql='select * from student';
+$sql='select * from student order by start_time desc';
 $res=$db->getAll($sql);
 //查询签到学生信息
 $sql="SELECT name_,count(*) FROM qiandao GROUP BY name_";
@@ -39,6 +39,7 @@ require_once 'footsuper.php';
             <td>起始</td>
             <td>结束</td>
             <td>备注</td>
+            <td>场地</td>
             <td>修改</td>
         </tr>
         <?php
@@ -67,6 +68,7 @@ require_once 'footsuper.php';
             <td>".$key['start_time']."</td>
             <td>".$key['end_time']."</td>
             <td>".$key['integral']."</td>
+            <td>".$key['scope']."</td>
             <td>
                 <a href='../admin/student_xg.php?id=".$key['id']."&name_=".$key['name_']."');\"> 修改</a>
             </td>

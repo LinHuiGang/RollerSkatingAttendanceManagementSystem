@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+  <title>table模块快速使用</title>
+  <link rel="stylesheet" href="./layui/css/layui.css" media="all">
+</head>
+<body>
+<div class="layui-container">
+  <div class="layui-row">
+<table id="demo" lay-filter="test"></table>
+  </div>
+</div>
+<script src="./layui/layui.js"></script>
+<script>
+layui.use('table', function(){
+  var table = layui.table;
+  
+  //第一个实例
+  table.render({
+    elem: '#demo'
+    ,height: 'full-20'
+    ,url: '../include/json_one_xy_info.php' //数据接口
+    ,even: true //开启隔行背景
+    ,toolbar: true
+    ,cols: [[ //表头
+       {field: 'name_', title: '姓名', width:80, fixed: 'left',edit:true}
+      ,{field: 'id', title: '编号', sort: true,edit:true}
+      ,{field: 'sex', title: '性别',edit:true}
+      ,{field: 'birth_date', title: '生日'}
+      ,{field: 'height', title: '身高', sort: true,edit:true}
+      ,{field: 'weight', title: '体重',sort: true,edit:true}
+      ,{field: 'phone', title: '手机号',edit:true}
+      ,{field: 'type', title: '类型', sort: true,edit:true}
+      ,{field: 'money', title: '缴费', sort: true,edit:true}
+      ,{field: 'max_count', title: '次数', sort: true,edit:true}
+      ,{field: 'start_time', title: '开始时间', sort: true}
+      ,{field: 'end_time', title: '结束时间', sort: true}
+    ]]
+  });
+  
+});
+</script>
+</body>
+</html>

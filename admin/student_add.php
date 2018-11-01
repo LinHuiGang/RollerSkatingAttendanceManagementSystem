@@ -104,12 +104,24 @@ require_once 'footsuper.php';
                         <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" bordercolor="#FF0000">
                             <tr>
                                 <td>
-                                    <p><input type='radio' name='type' value=定金 style='width:20px;height:20px' /> 定金 </p>
-                                    <p><input type='radio' name='type' value=次卡 style='width:20px;height:20px' /> 次卡 </p>
-                                    <p><input type='radio' name='type' value=月卡 style='width:20px;height:20px' /> 月卡 </p>
-                                    <p><input type='radio' name='type' value=年卡 style='width:20px;height:20px' /> 年卡 </p>
-                                    <p><input type='radio' name='type' value=寒假班 style='width:20px;height:20px' /> 寒假班 </p>
-                                    <p><input type='radio' name='type' value=暑假班 style='width:20px;height:20px' /> 暑假班 </p>
+                                    <p><input type='radio' name='type' value='定金' style='width:20px;height:20px' /> 定金 </p>
+                                    <p><input type='radio' name='type' value='次卡' style='width:20px;height:20px' /> 次卡 </p>
+                                    <p><input type='radio' name='type' value='月卡' style='width:20px;height:20px' /> 月卡 </p>
+                                    <p><input type='radio' name='type' value='年卡' style='width:20px;height:20px' /> 年卡 </p>
+                                    <p><input type='radio' name='type' value='寒假班' style='width:20px;height:20px' /> 寒假班 </p>
+                                    <p><input type='radio' name='type' value='暑假班' style='width:20px;height:20px' /> 暑假班 </p>
+                                </td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                    <fieldset>
+                        <legend>场地</legend>
+                        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" bordercolor="#FF0000">
+                            <tr>
+                                <td>
+                                    <p><input type='radio' name='scope' value='室内' style='width:20px;height:20px' /> 室内 </p>
+                                    <p><input type='radio' name='scope' value='室外1' style='width:20px;height:20px' /> 室外1 </p>
+                                    <p><input type='radio' name='scope' value='室外2' style='width:20px;height:20px' /> 室外2 </p>
                                 </td>
                             </tr>
                         </table>

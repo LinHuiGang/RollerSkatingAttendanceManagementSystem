@@ -53,8 +53,8 @@ if(isset($_SESSION['name'])){
                 <p>姓名：<input name="name" type=text style="width:150px;height:40px" placeholder="名字"></p>
                 <p>密码：<input name="password" type=password style="width:150px;height:40px" placeholder="密码"></p>
                 <p>身份：
-                    <input name="sf" type=radio style="width:24px;height:24px" value="学员" >学员
-                    <input name="sf" type=radio style="width:24px;height:24px" value="教练" checked>教练
+                    <input name="sf" type=radio style="width:24px;height:24px" value="学员" checked>学员
+                    <input name="sf" type=radio style="width:24px;height:24px" value="教练" >教练
                 </p>
                 <p class="remember_me">
                     <label>
