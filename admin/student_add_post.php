@@ -12,7 +12,7 @@ if(!isset($_SESSION['name'])){
     header('Location:../login.php');
     exit();
 }
-if(isset($_POST)){
+if(isset($_POST['name_'])){
     require_once '../include/db_class.php';
     require_once '../config.php';
     $row=$db->insert('student',$_POST);

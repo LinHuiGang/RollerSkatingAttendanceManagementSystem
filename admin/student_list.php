@@ -13,7 +13,7 @@ if(!isset($_SESSION['name'])){
 require_once '../include/db_class.php';
 require_once '../config.php';
 //查询所有学生信息
-$sql='select * from student order by start_time desc';
+$sql='select * from student order by id desc';
 $res=$db->getAll($sql);
 //查询签到学生信息
 $sql="SELECT name_,count(*) FROM qiandao GROUP BY name_";
